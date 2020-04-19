@@ -46,6 +46,10 @@ namespace DashboardService.Controllers
                 data = new BigChartData();
             else if (chartType == "pie")
                 data = new PieChartData();
+            else if (chartType == "table")
+                data = new TableData();
+            else if (chartType == "card")
+                data = new CardData();
 
             return data switch
             {

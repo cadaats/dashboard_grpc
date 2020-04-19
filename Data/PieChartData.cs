@@ -20,9 +20,9 @@ namespace DashboardService.Data
                     new PieChartModel.Datum()
                     {
                         Name= "Chrome",
-                        Y = 61.41
-                        //Selected = true,
-                        //Sliced = true
+                        Y = 61.41,
+                        Selected = true,
+                        Sliced = true
                     },
                     new PieChartModel.Datum()
                     {
