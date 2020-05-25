@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option csharp_namespace = "DashboardService.Protos";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "Protos/enums.proto";
+
+service DashboardDataService {
+    //rpc GetTableData(google.protobuf.Empty) returns (TableData); //This is the way you code for empty params, but always good to have an argument
+    rpc GetTableData(DashboardRequest) returns (TableData);
+}
+
+message DashboardRequest {
+    ChartType charttype = 1;
+    StatusMessage success = 2; 
+}
+
+message TableData {
+    repeated TableRow messages = 1;
+    StatusMessage successful = 2;
+    google.protobuf.Timestamp responseTime = 5;
+    reserved 3, 4;
+    reserved "errormessage";
+}
+message TableRow {
+	    string name =1;
+        int64 weight =2;
+        string symbol =3;
+        int64 position =4;
+}

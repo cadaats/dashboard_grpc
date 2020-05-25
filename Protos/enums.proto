@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "DashboardService.Protos";
+
+enum StatusMessage {
+	INVALID = 0;
+	SUCCESS = 1;
+	FAILURE = 2;
+}
+
+enum ChartType {
+	TABLE = 0;
+	PI = 1;
+	BIG = 2;
+}

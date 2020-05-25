@@ -14,7 +14,7 @@ namespace DashboardService.Controllers
     [ApiController]
     public class DashboardController : ControllerBase
     {
-        JObject dataCache = null;
+        //JObject dataCache = null;
         public DashboardController()
         {
             //Prepare data
